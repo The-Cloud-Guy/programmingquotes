@@ -1,0 +1,20 @@
+replicaCount: 2
+
+image:
+  repository: thecloudguyn/programmingquotes
+  pullPolicy: IfNotPresent
+  tag: "latest"
+
+service:
+  name: pyquotes-ssvc
+  type: NodePort
+  port: 5000
+  targetPort: 5000
+  nodePort: 30009 
+
+deployment:
+  name: pyquotes-deployment
+  labels:
+    app: pyquotes-app
+  containerPort: 5000
+  serviceLabel: pyquotes-service

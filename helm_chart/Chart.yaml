@@ -1,0 +1,5 @@
+apiVersion: v2
+name: eshop-chart
+description: A Helm chart for deploying the pyquotes application
+version: 0.1.0
+appVersion: "1.0"
